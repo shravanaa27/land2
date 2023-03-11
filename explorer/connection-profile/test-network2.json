@@ -1,0 +1,48 @@
+{
+	"name": "Test-network",
+	"version": "1.0.0",
+	"client": {
+		"tlsEnable": true,
+		"adminCredential": {
+			"id": "exploreradmin",
+			"password": "exploreradminpw"
+		},
+		"enableAuthentication": true,
+		"organization": "sroMSP",
+		"connection": {
+			"timeout": {
+				"peer": {
+					"endorser": "300"
+				},
+				"orderer": "300"
+			}
+		}
+	},
+	"channels": {
+		"landchannel": {
+			"peers": {
+				"peer0.sro.land.com": {}
+			}
+		}
+	},
+	"organizations": {
+		"sroMSP": {
+			"mspid": "sroMSP",
+			"adminPrivateKey": {
+				"path": "/tmp/crypto/peerOrganizations/sro.land.com/users/User1@sro.land.com/msp/keystore/5f53d9c36c18e1b5ed5fa7d6b90f7daeba89f3079783302fa2d14c9e16cc65bc_sk"
+			},
+			"peers": ["peer0.sro.land.com"],
+			"signedCert": {
+				"path": "/tmp/crypto/peerOrganizations/sro.land.com/users/User1@sro.land.com/msp/signcerts/cert.pem"
+			}
+		}
+	},
+	"peers": {
+		"peer0.sro.land.com": {
+			"tlsCACerts": {
+				"path": "/tmp/crypto/peerOrganizations/sro.land.com/peers/peer0.sro.land.com/tls/ca.crt"
+			},
+			"url": "grpcs://peer0.sro.land.com:7051"
+		}
+	}
+}
