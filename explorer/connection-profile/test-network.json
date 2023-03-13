@@ -1,0 +1,73 @@
+{
+	"name": "first-network",
+	"version": "1.0.0",
+	"license": "Apache-2.0",
+	"client": {
+		"tlsEnable": true,
+		"caCredential": {
+			"id": "admin",
+			"password": "adminpw"
+		},
+		"adminCredential": {
+			"id": "exploreradmin4",
+			"password": "exploreradminpw",
+			"affiliation": "org1.department1"
+		},
+		"enableAuthentication": true,
+		"organization": "sroMSP",
+		"connection": {
+			"timeout": {
+				"peer": {
+					"endorser": "300"
+				},
+				"orderer": "300"
+			}
+		}
+	},
+	"channels": {
+		"landchannel": {
+			"peers": {
+				"peer0.sro.land.com": {}
+			},
+			"connection": {
+				"timeout": {
+					"peer": {
+						"endorser": "6000",
+						"eventHub": "6000",
+						"eventReg": "6000"
+					}
+				}
+			}
+		}
+	},
+	"organizations": {
+		"sroMSP": {
+			"mspid": "sroMSP",
+			"peers": ["peer0.sro.land.com"],
+			"certificateAuthorities": ["ca_sro"]
+		}
+	},
+	"peers": {
+		"peer0.sro.land.com": {
+			"tlsCACerts": {
+				"path": "/tmp/crypto/peerOrganizations/sro.land.com/peers/peer0.sro.land.com/tls/ca.crt"
+			},
+			"url": "grpcs://peer0.sro.land.com:7051",
+			"grpcOptions": {
+				"ssl-target-name-override": "peer0.sro.land.com"
+			}
+		}
+	},
+	"certificateAuthorities": {
+		"ca_sro": {
+			"url": "https://ca_sro:7054",
+			"httpOptions": {
+				"verify": false
+			},
+			"tlsCACerts": {
+				"path": "/tmp/crypto/peerOrganizations/sro.land.com/ca/ca.sro.land.com-cert.pem"
+			},
+			"caName": "ca_sro-sro"
+		}
+	}
+}

@@ -1,0 +1,102 @@
+{
+    ~~~
+    "organizations": {
+        "bankema": {
+            "mspid": "bankemaMSP",
+            "peers": {
+                "peer0.bankema-net": {}
+            },
+            "certificateAuthorities": {
+                "ca.bankema-net": {}
+            },
+            "fullpath": true,
+            "adminPrivateKey": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/bankema-net/msp/keystore/server.key"
+            },
+            "signedCert": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/bankema-net/msp/signcerts/server.crt"
+            }
+        },
+        "vendor": {
+            "mspid": "vendorMSP",
+            "peers": {
+                "peer0.vendor-net": {}
+            },
+            "certificateAuthorities": {
+                "ca.vendor-net": {}
+            },
+            "fullpath": true,
+            "adminPrivateKey": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/vendor-net/msp/keystore/server.key"
+            },
+            "signedCert": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/vendor-net/msp/signcerts/server.crt"
+            }
+        },
+        "factor": {
+            "mspid": "factorMSP",
+            "peers": {
+                "peer0.factor-net": {}
+            },
+            "certificateAuthorities": {
+                "ca.factor-net": {}
+            },
+            "fullpath": true,
+            "adminPrivateKey": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/factor-net/msp/keystore/server.key"
+            },
+            "signedCert": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/factor-net/msp/signcerts/server.crt"
+            }
+        },
+        "corg": {
+            "mspid": "corgMSP",
+            "peers": {
+                "peer0.corg-net": {}
+            },
+            "certificateAuthorities": {
+                "ca.corg-net": {}
+            },
+            "fullpath": true,
+            "adminPrivateKey": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/corg-net/msp/keystore/server.key"
+            },
+            "signedCert": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/corg-net/msp/signcerts/server.crt"
+            }
+        },
+        "insurer": {
+            "mspid": "insurerMSP",
+            "peers": {
+                "peer0.insurer-net": {}
+            },
+            "certificateAuthorities": {
+                "ca.insurer-net": {}
+            },
+            "fullpath": true,
+            "adminPrivateKey": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/insurer-net/msp/keystore/server.key"
+            },
+            "signedCert": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/insurer-net/msp/signcerts/server.crt"
+            }
+        },
+        "investor3": {
+            "mspid": "investor3MSP",
+            "peers": {
+                "peer0.investor3-net": {}
+            },
+            "certificateAuthorities": {
+                "ca.investor3-net": {}
+            },
+            "fullpath": true,
+            "adminPrivateKey": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/investor3-net/msp/keystore/server.key"
+            },
+            "signedCert": {
+                "path": "/mnt/fabric/crypto-config/peerOrganizations/investor3-net/msp/signcerts/server.crt"
+            }
+        }
+    }
+    ~~~
+}
